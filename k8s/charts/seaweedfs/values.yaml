@@ -98,7 +98,7 @@ master:
     size: ""
     storageClass: ""
     hostPathPrefix: /storage
-  
+
   ## @param master.sidecars Add additional sidecar containers to the master pod(s)
   ## e.g:
   ## sidecars:
@@ -224,6 +224,8 @@ volume:
   imageTag: null
   imageOverride: null
   restartPolicy: null
+  minReadySeconds: null
+  updateStrategy: null
   port: 8080
   grpcPort: 18080
   metricsPort: 9327
@@ -297,7 +299,7 @@ volume:
 
   # Adjust jpg orientation when uploading.
   imagesFixOrientation: false
-  
+
   ## @param volume.sidecars Add additional sidecar containers to the volume pod(s)
   ## e.g:
   ## sidecars:
@@ -451,7 +453,7 @@ filer:
     size: ""
     storageClass: ""
     hostPathPrefix: /storage
-  
+
   ## @param filer.sidecars Add additional sidecar containers to the filer pod(s)
   ## e.g:
   ## sidecars:
@@ -644,7 +646,7 @@ s3:
 
   # Suffix of the host name, {bucket}.{domainName}
   domainName: ""
-  
+
   ## @param s3.sidecars Add additional sidecar containers to the s3 pod(s)
   ## e.g:
   ## sidecars:
