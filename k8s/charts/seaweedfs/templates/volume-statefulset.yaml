@@ -12,6 +12,13 @@ metadata:
 spec:
   serviceName: {{ template "seaweedfs.name" . }}-volume
   replicas: {{ .Values.volume.replicas }}
+  {{- if .Values.volume.minReadySeconds }}
+  minReadySeconds: {{ .Values.volume.minReadySeconds }}
+  {{- end }}
+  {{- if .Values.volume.updateStrategy }}
+  updateStrategy:
+    {{ tpl .Values.volume.updateStrategy . | nindent 4 | trim }}
+  {{- end }}
   podManagementPolicy: {{ .Values.volume.podManagementPolicy }}
   selector:
     matchLabels:
@@ -39,13 +46,6 @@ spec:
         {{ tpl .Values.volume.affinity . | nindent 8 | trim }}
       {{- end }}
       restartPolicy: {{ default .Values.global.restartPolicy .Values.volume.restartPolicy }}
-      {{- if .Values.volume.minReadySeconds }}
-      minReadySeconds: {{ .Values.volume.minReadySeconds }}
-      {{- end }}
-      {{- if .Values.volume.updateStrategy }}
-      updateStrategy:
-        {{ tpl .Values.volume.updateStrategy . | nindent 8 | trim }}
-      {{- end }}
       {{- if .Values.volume.tolerations }}
       tolerations:
         {{ tpl .Values.volume.tolerations . | nindent 8 | trim }}
