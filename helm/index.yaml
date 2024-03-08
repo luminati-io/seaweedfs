@@ -3,7 +3,16 @@ entries:
   seaweedfs:
   - apiVersion: v1
     appVersion: "3.62"
-    created: "2024-03-07T20:35:08.57534422+01:00"
+    created: "2024-03-08T11:51:17.929728387+01:00"
+    description: SeaweedFS
+    digest: e7b8b78fcc414dc333099df348168b6d45949f09e73bdbd61c2c490e89670448
+    name: seaweedfs
+    urls:
+    - https://luminati-io.github.io/seaweedfs/helm/seaweedfs-3.62.0-brd.2.tgz
+    version: 3.62.0-brd.2
+  - apiVersion: v1
+    appVersion: "3.62"
+    created: "2024-03-08T11:51:17.927023805+01:00"
     description: SeaweedFS
     digest: d5ff6e40cbc00dbff139e827cbd72b895646899fef840d6092f16fa703c72952
     name: seaweedfs
@@ -12,11 +21,11 @@ entries:
     version: 3.62.0-brd.1
   - apiVersion: v1
     appVersion: "3.62"
-    created: "2024-03-07T20:35:08.568921013+01:00"
+    created: "2024-03-08T11:51:17.921773089+01:00"
     description: SeaweedFS
     digest: dddc1968110f8a58c1401f1364ae0f8a31ee4b3fb4ddf68819c83ba4ea52cb8d
     name: seaweedfs
     urls:
     - https://luminati-io.github.io/seaweedfs/helm/seaweedfs-3.62.0-brd.0.tgz
     version: 3.62.0-brd.0
-generated: "2024-03-07T20:35:08.566860625+01:00"
+generated: "2024-03-08T11:51:17.918188039+01:00"
